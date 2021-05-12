@@ -17,7 +17,7 @@ import com.nayan.service.UserRegistrationService;
 
 @RestController
 
-@CrossOrigin(origins = "http://localhost:51544")
+@CrossOrigin(origins = "https://employee-registration-app.herokuapp.com")
 @RequestMapping(value = "/user")
 
 public class UserController {
