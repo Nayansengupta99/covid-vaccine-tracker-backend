@@ -17,7 +17,8 @@ public class User {
 private Long userId;
 private String name;
 private String email;
-private int exp;
-private String domain;
+private int age;
+private String district;
+private String vaccineCenter;
 
 }

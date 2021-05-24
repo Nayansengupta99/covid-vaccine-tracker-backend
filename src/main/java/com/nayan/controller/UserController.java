@@ -17,13 +17,14 @@ import com.nayan.service.UserRegistrationService;
 
 @RestController
 
-@CrossOrigin(origins = "https://employee-registration-app.herokuapp.com")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(value = "/user")
 
 public class UserController {
 
 	@Autowired
 	private UserRegistrationService service;
+	
 
 	
 	@GetMapping("/")
@@ -37,12 +38,13 @@ public class UserController {
 	
 	@PostMapping("/register")
 	public String saveUser(@RequestBody User user) {
+		
 		return service.saveUserData(user);
 	}
 
 	@DeleteMapping("/delete/{id}")
 	public String deleteUser(@PathVariable long id) {
-		return service.deleteDataByName(id);
+		return service.deleteDataById(id);
 	}
 
 }
